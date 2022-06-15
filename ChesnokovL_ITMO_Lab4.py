@@ -1,7 +1,7 @@
 from random import randint
 import time
 
-# Ввод имен играющих
+# Ввод имен Игроков
 igrok1 = input('Введите имя 1-го играющего ')
 igrok2 = input('Введите имя 2-го играющего ')
 summPointsIgrok1 = 0
@@ -9,7 +9,7 @@ summPointsIgrok2 = 0
 
 for i in range(5):
 
-    # Моделирование бросания кубика первым играющим
+    # Моделирование бросания кубика первым Игроком
     print("Шаг ", i + 1)
     print('Кубик бросает', igrok1)
     time.sleep(2)
@@ -17,7 +17,7 @@ for i in range(5):
     print('Выпало:', n1)
     summPointsIgrok1 += n1
 
-    # Моделирование бросания кубика вторым играющим
+    # Моделирование бросания кубика вторым Игроком
     print('Кубик бросает', igrok2)
     time.sleep(2)
     n2 = randint(1, 6)
@@ -27,7 +27,7 @@ for i in range(5):
 print(igrok1, "очки: ", summPointsIgrok1)
 print(igrok2, "очки: ", summPointsIgrok2)
 
-# Определение результата (3 возможных варианта)
+# Определение результата (Выиграл 1 Игрок, Выиграл 2 Игрой, Ничья)
 if summPointsIgrok1 > summPointsIgrok2:
     print('Выиграл', igrok1)
 elif summPointsIgrok1 < summPointsIgrok2:
